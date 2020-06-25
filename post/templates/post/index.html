@@ -1,0 +1,24 @@
+{% extends 'post/base.html' %}
+{% block content %}
+      <div class="container">
+         <h1 class="center-align">All Posts</h1>
+      </div>
+      <div class="container">
+         <div class="row">
+            {% for post in posts %}
+            <div class="col s12 m4">
+               <div class="card ">
+                  <div class="card-content ">
+                     <span class="card-title">	{{ post.title }}</span>
+                     <p>{{ post.preview }}</p>
+                  </div>
+                  <div class="card-action">
+                     <a href="/post/{{ post.id }}">Read More</a>
+                  </div>
+               </div>
+            </div>
+            {% endfor %}
+         </div>
+      </div>
+      {% endblock %}
+      
